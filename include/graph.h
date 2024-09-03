@@ -17,7 +17,7 @@ private:
 public:
     Graph(int n);
 
-    void buildGraph(vector<int> src, vector<int> dst, vector<int> weight);
+    void buildGraph(vector<int>& src, vector<int>& dst, vector<int>& weight);
 
     vector<int> getNeighborsWithoutWeight(int source);
     vector<pair<int, int>> getNeighborsWithWeight(int source);

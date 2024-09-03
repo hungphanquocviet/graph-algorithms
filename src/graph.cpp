@@ -1,8 +1,8 @@
-#include "graph.h"
+#include "../include/graph.h"
 
 Graph::Graph(int n) : n(n), adjList(n+1), inDegree(n+1, 0) {}
 
-void Graph::buildGraph(vector<int> src, vector<int> dst, vector<int> weight) {
+void Graph::buildGraph(vector<int>& src, vector<int>& dst, vector<int>& weight) {
     for (int i = 0; i <= n; i++) {
         int a = src[i];
         int b = dst[i];
@@ -16,8 +16,9 @@ void Graph::buildGraph(vector<int> src, vector<int> dst, vector<int> weight) {
 
 vector<int> Graph::getNeighborsWithoutWeight(int source) {
     vector<int> res;
-    for (auto& pair : source) {
-        res.push_back(pair.second);
+    for (auto& neighbor : adjList) {
+        for (auto& it : neighbor)
+            res.push_back(it.second);
     }
 
     return res;
