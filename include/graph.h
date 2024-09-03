@@ -10,10 +10,13 @@ using namespace std;
 class Graph {
 private:
     // adjList[a] = {w, b};
+    int n;
     vector<vector<pair<int, int>>> adjList;
     vector<int> inDegree;
 
 public:
+    Graph(int n);
+
     void addEdge(vector<int> src, vector<int> dst, vector<int> weight);
 
     vector<int> getNeighborsWithoutWeight(int source);
