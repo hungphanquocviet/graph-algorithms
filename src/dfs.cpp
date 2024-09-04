@@ -8,14 +8,14 @@ bool dfs(Graph& g, int src, int dst) {
 }
 
 int main() {
-    int n;
-    cin >> n;
+    int n, k;
+    cin >> n >> k;
 
     vector<int> src(n+1);
     vector<int> dst(n+1);
     vector<int> weight(n+1);
 
-    for (int i = 0; i <= n; i++) {
+    for (int i = 0; i < k; i++) {
         int a, b, w;
         cin >> a >> b >> w;
     }
