@@ -2,7 +2,7 @@ CC = g++
 CFLAGS = -g -std=c++14 -fsanitize=undefined -fsanitize=address -fsanitize=leak
 
 # File Path
-GOOGLETEST ?= ../../../../googletest
+GOOGLETEST ?= ../googletest
 GOOGLETESTLIB = $(GOOGLETEST)/lib
 GOOGLETESTINC = $(GOOGLETEST)/googletest/include
 GOOGLETESTGTEST = $(GOOGLETEST)/googletest/include/gtest
